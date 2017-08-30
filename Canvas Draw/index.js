@@ -15,7 +15,16 @@ window.onload = function () {
     ctx.closePath();
     ctx.fill();
 
-    // Draw 
+    // Draw Circle
+    circle = new Path2D();
+    circle.moveTo(400,400);
+    circle.arc(100, 35 ,25 , 0 , 2 * Math.PI);
+    ctx.fill(circle);
+
+    //Draw Rectangle
+    rectangle = new Path2D();
+    rectangle.rect( 200 , 20 , 90 , 50);
+    ctx.stroke(rectangle);
 
     setInterval(update, 1000 / framesPerSecond);
 }
